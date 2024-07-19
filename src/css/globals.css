@@ -1,0 +1,747 @@
+@charset "UTF-8";
+/* color : point */
+/* color : gray scale */
+/* 폰트 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #232323;
+  box-sizing: border-box;
+}
+
+/* box-sizing 규칙을 명시합니다. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 폰트 크기의 팽창을 방지합니다. */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 기본 여백을 제거하여 작성된 CSS를 더 잘 제어할 수 있습니다. */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+/* list를 ul, ol 요소의 기본 목록 스타일을 제거합니다. */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 핵심 body의 기본값을 설정합니다. */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* 제목 요소와 상호작용하는 요소에 대해 line-height를 더 짧게 설정합니다. */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* 제목에 대한 text-wrap을 balance로 설정합니다. */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* 이미지 관련 작업을 더 쉽게 합니다. */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* input 및 button 항목들이 글꼴을 상속하도록 합니다. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 행 속성이 없는 textarea가 너무 작지 않도록 합니다. */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* 고정된 모든 항목에는 여분의 스크롤 여백이 있어야 합니다. */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 900;
+  src: url("../fonts/notoSansKR/NotoSansKR-Black.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 800;
+  src: url("../fonts/notoSansKR/NotoSansKR-ExtraBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 700;
+  src: url("../fonts/notoSansKR/NotoSansKR-Bold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 600;
+  src: url("../fonts/notoSansKR/NotoSansKR-SemiBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 500;
+  src: url("../fonts/notoSansKR/NotoSansKR-Medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 400;
+  src: url("../fonts/notoSansKR/NotoSansKR-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 300;
+  src: url("../fonts/notoSansKR/NotoSansKR-Light.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 200;
+  src: url("../fonts/notoSansKR/NotoSansKR-ExtraLight.ttf") format("opentype");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 100;
+  src: url("../fonts/notoSansKR/NotoSansKR-Thin.ttf") format("opentype");
+}
+/* 공통 클래스 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 1200px;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1310px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+#observer {
+  background: #fff;
+  z-index: 10;
+  position: relative;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.section .title-box .menu {
+  font-size: 15px;
+  font-weight: 500;
+  color: #757575;
+}
+.section .title-box .title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 49px;
+}
+.section .title-box .title .point-color {
+  color: #388ba4;
+}
+.section .title-box .sub-title {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* header */
+.header {
+  box-shadow: 0px 0px 4px #757575;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+.header .container h1 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.header .container h1 img {
+  width: 35px;
+}
+.header .container .menu-box {
+  position: relative;
+}
+.header .container .menu-box .moving-bar {
+  position: absolute;
+  left: 0;
+  right: 360px;
+  background: #81bece;
+  height: 2px;
+  bottom: -2px;
+  transition: 0.2s;
+}
+.header .container .menu {
+  display: flex;
+  gap: 10px;
+  width: 360px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.header .container .menu li {
+  text-align: center;
+  width: calc(25% - 7.5px);
+}
+.header .container .menu li::before {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.header .container .menu li:hover {
+  color: #036280;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.header .container .menu li:hover::before {
+  background-color: #388ba4;
+}
+.header .clickEmail {
+  position: relative;
+}
+.header .clickEmail .send-email {
+  width: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.header .clickEmail .send-email:hover {
+  transform: scale(1.2);
+  filter: brightness(3);
+}
+.header #notification {
+  display: none;
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #65b277;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+}
+
+.header-hide-box {
+  height: 72px;
+}
+
+/* banner */
+.main-banner-sec {
+  height: 600px;
+  color: #000;
+  overflow: hidden;
+  position: relative;
+}
+.main-banner-sec .banner-img {
+  animation: zoom 7s ease-in-out forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-banner-sec .container {
+  position: relative;
+  z-index: 1;
+}
+.main-banner-sec h2 {
+  line-height: 1.4;
+  padding-top: 130px;
+  font-size: 53px;
+  font-weight: 600;
+}
+.main-banner-sec p {
+  padding-top: 48px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.whoarewe {
+  padding-top: 140px;
+}
+.whoarewe .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.whoarewe .whoarewe-list {
+  max-width: 654px;
+}
+.whoarewe .whoarewe-list h4 {
+  margin-top: 5px;
+  font-size: 48px;
+  font-weight: 500;
+}
+.whoarewe .whoarewe-list p {
+  font-size: 16px;
+  color: #757575;
+  margin-top: 10px;
+  word-spacing: -1px;
+}
+.whoarewe .whoarewe-list li:not(:first-child) {
+  margin-top: 148px;
+}
+
+.factory {
+  border-top: 1px solid #adadad;
+  display: block;
+  margin-top: 100px;
+}
+.factory .title-box {
+  width: 100%;
+  margin-top: 100px;
+}
+.factory .factory-list {
+  margin-top: 10px;
+}
+.factory .factory-list li {
+  position: relative;
+  margin-top: 55px;
+  width: 100%;
+  overflow: hidden;
+}
+.factory-text {
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.factory-text.reverse {
+  width: 50%;
+  margin-right: -5%;
+}
+.factory-text span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #036280;
+  margin-bottom: 5px;
+}
+.factory-text h4 {
+  font-weight: bold;
+  font-size: 36px;
+}
+.factory-text p {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #494949;
+}
+.factory .img-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 430px;
+  overflow: hidden;
+  width: 50%;
+}
+.factory .img-box.reverse {
+  right: auto;
+  left: 0;
+}
+.factory .img-box img {
+  display: flex;
+  margin-left: auto;
+}
+
+.drone {
+  background: url("../img/SmartDroneBg.png") no-repeat center/cover;
+  color: #fff;
+  height: 560px;
+  margin-top: 100px;
+  background-attachment: fixed; /* 스크롤바 움직일때 이미지가 따라다님 */
+  margin-bottom: 165px;
+}
+.drone .title-box {
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #fff;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.drone .title-box h3 {
+  font-weight: 500;
+  font-size: 36px;
+}
+.drone .title-box .right-text {
+  text-align: right;
+}
+.drone .title-box h4 {
+  font-weight: bold;
+  font-size: 32px;
+}
+.drone .title-box p {
+  font-size: 16px;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #757575;
+}
+.drone .drone-list {
+  display: flex;
+  gap: 65px;
+}
+.drone .drone-list li {
+  height: 425px;
+  width: calc(33.33% - 43.3px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drone .drone-list li:hover img {
+  top: 180px;
+}
+.drone .drone-list h5 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.drone .drone-list span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #388ba4;
+  margin-bottom: 12px;
+}
+.drone .drone-list p {
+  font-size: 16px;
+  padding: 0 10px;
+  max-width: 350px;
+}
+.drone .drone-list img {
+  position: absolute;
+  width: 350px;
+  top: 70px;
+  transition: 0.2s;
+}
+
+.smartFarm {
+  background-color: #222;
+  padding: 126px;
+}
+.smartFarm .title-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+}
+.smartFarm .title-box .sub-title {
+  color: #767676;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.smartFarm .title-box .title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+.smartFarm .title-box img {
+  width: 40px;
+}
+.smartFarm .wrapper {
+  margin: 0 auto;
+  max-width: 1310px;
+  margin-top: 72px;
+}
+.smartFarm .cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.smartFarm .col {
+  width: calc(33.33% - 20px);
+  cursor: pointer;
+}
+.smartFarm .container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.smartFarm .front,
+.smartFarm .back {
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-position: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 280px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.smartFarm .back {
+  background: #cedce7;
+}
+.smartFarm .front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  opacity: 0.6;
+  background-color: #000;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.smartFarm .container:hover .front,
+.smartFarm .container:hover .back {
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.smartFarm .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.smartFarm .inner {
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  font-size: 18px;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  perspective: inherit;
+  z-index: 2;
+}
+.smartFarm .container .back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+.smartFarm .container .back .inner {
+  color: #000;
+}
+.smartFarm .container .front {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.smartFarm .container:hover .back {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+.smartFarm .container:hover .front {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.smartFarm .front .inner p {
+  font-size: 20px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.smartFarm .front .inner p:after {
+  content: "";
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #c6d4df;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -0.75rem;
+}
+.smartFarm .front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 17px;
+}
+@media screen and (max-width: 64rem) {
+  .smartFarm .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+@media screen and (max-width: 48rem) {
+  .smartFarm .col {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 32rem) {
+  .smartFarm .col {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+
+.smart-last {
+  padding: 90px 0;
+  background-image: url("../img/lastbg.png");
+  background-repeat: no-repeat; /* 배경이미지X */
+  background-position: 3px 100%; /* 이미지를 요소의 정가운데로 처리 */
+  background-size: 389px 370px;
+}
+.smart-last .container {
+  display: flex;
+}
+.smart-last .title {
+  font-size: 36px;
+  font-weight: bold;
+  width: 45%;
+}
+.smart-last .title .point-color {
+  color: #388ba4;
+}
+.smart-last-list {
+  width: 55%;
+  border-top: 2px solid #222;
+}
+.smart-last-list li {
+  padding: 23px 43px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.smart-last-list li .title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.smart-last-list li .title-box img {
+  width: 10px;
+}
+.smart-last-list li p {
+  display: none;
+  padding-top: 20px;
+}
+
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+}
+.footer .main-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.footer .main-footer a {
+  color: #fff;
+}
+.footer .menu-list {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 13px;
+}
+.footer .company-list {
+  margin-top: 26px;
+  color: #969696;
+  font-size: 12px;
+  font-weight: 500;
+}
+.footer .right-cont p {
+  font-size: 13px;
+  font-weight: bold;
+}
+.footer .right-cont span {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #969696;
+}
+.footer .sub-footer {
+  border-top: 1px solid #252525;
+  padding: 20px 0;
+}
+.footer .sub-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .sub-footer p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.footer .sub-footer span {
+  font-weight: 500;
+  font-size: 12px;
+}/*# sourceMappingURL=globals.css.map */

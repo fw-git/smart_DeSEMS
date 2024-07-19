@@ -1,0 +1,22 @@
+/* color : point */
+$point1: #012e4f;
+$point2: #036280;
+$point3: #388ba4;
+$point4: #81bece;
+$point5: #e8ede6;
+
+/* color : gray scale */
+$gray1: #232323;
+$gray2: #494949;
+$gray3: #757575;
+$gray4: #adadad;
+$gray5: #eaeaea;
+
+/* 폰트 */
+$base-font: "Noto Sans KR", sans-serif;
+
+body {
+  font-family: $base-font;
+  color: $gray1;
+  box-sizing: border-box;
+}

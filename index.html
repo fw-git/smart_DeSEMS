@@ -3,407 +3,488 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FUTURE WORK</title>
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Future Work</title>
 
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="./src/img/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="./src/img/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./src/img/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./src/img/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="./src/img/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./src/img/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./src/img/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./src/img/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./src/img/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="./src/img/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./src/img/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./src/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./src/img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./src/css/globals.css" />
+    <!-- 제이쿼리 js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Slick 불러오기 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
+    <!-- wow js -->
     <script src="wow.js"></script>
     <link rel="stylesheet" href="/src/css/animate.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-    />
+    <!-- gsap js -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
     <script src="./index.js"></script>
   </head>
   <body>
-    <header>
-      <div class="header-container">
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <h1>
+          <img src="./src/img/logo.png" alt="future work logo" />
+          <span>Future Work</span>
+        </h1>
+
         <div class="menu-box">
-          <p class="logo">
-            <img src="../src/img/logo.png" alt="logo" />
-          </p>
+          <p class="moving-bar"></p>
           <ul class="menu">
-            <li>
-              <a href="#About">About</a>
+            <li class="menuItem">
+              <a href="#sec1">회사소개</a>
             </li>
-            <li>
-              <a href="#Business">Business</a>
+            <li class="menuItem">
+              <a href="#sec2">스마트 공장</a>
             </li>
-            <li>
-              <a href="#History">연혁</a>
+            <li class="menuItem">
+              <a href="#sec3">스마트 드론</a>
             </li>
-            <li>
-              <a href="#Vision">비전 목표</a>
-            </li>
-            <li>
-              <a href="#DeSEMS">DeSEMS</a>
+            <li class="menuItem">
+              <a href="#sec4">스마트 팜</a>
             </li>
           </ul>
         </div>
 
-        <ul class="iconList">
-          <li>
-            <div class="clickEmail">
-              <div id="notification">이메일이 클립보드에 복사되었습니다.</div>
-              <img src="./src/img/icon_email.png" alt="email" id="copyButton" />
-            </div>
-          </li>
-        </ul>
+        <div class="clickEmail">
+          <div id="notification">문의 이메일이 클립보드에 복사되었습니다.</div>
+          <img
+            src="./src/img/sendMailIcon.png"
+            alt="sendemail"
+            class="send-email"
+            id="copyButton"
+          />
+        </div>
       </div>
     </header>
+    <div class="header-hide-box"></div>
+    <!-- header end -->
 
-    <div class="banner-slider">
-      <div class="slide">
-        <div class="wow fadeInDown">
-          <h2>
-            미래 에너지 Saving &<br />
-            All one Tech 플랫폼의 선두주자
-          </h2>
-          <p>
-            우리는 지속 가능한 미래를 위해 최선을 다합니다.<br />
-            에너지 절감과 혁신 기술을 통해<br />
-            함께 성장하는 세상을 만들어갑니다.
-          </p>
-        </div>
-
-        <img src="./src/img/bnr_bg_01.png" alt="bg" />
-      </div>
-      <div class="slide">
-        <div class="wow fadeInDown">
-          <h2>첨단 기술과 혁신 서비스</h2>
-          <p>
-            4차 산업혁명과 에너지 혁명 속에서<br />
-            고객 맞춤형 솔루션으로<br />
-            미래를 선도합니다.
-          </p>
-        </div>
-
-        <img src="./src/img/bnr_bg_02.png" alt="bg" />
-      </div>
-      <div class="slide">
-        <div class="wow fadeInDown">
-          <h2>스마트 기술로 여는 새로운 세상</h2>
-          <p>
-            스마트 공장, 스마트 빌딩, 스마트산단, 스마트시티, 스마트팜<br />
-            종합 에너지 절감과 효율성을 극대화하는<br />
-            혁신 솔루션
-          </p>
-        </div>
-
-        <img src="./src/img/bnr_bg_03.png" alt="bg" />
-      </div>
-    </div>
-    <button class="scroll-to-top" id="scrollToTopButton">
-      <img src="./src/img/icon_up.png" alt="위로 올라가기" />
-    </button>
-
-    <section class="whoWeAre" id="About">
+    <!-- banner -->
+    <section class="main-banner-sec parallax">
+      <img src="./src/img/bannerbg.png" alt="배경 이미지" class="banner-img" />
       <div class="container">
-        <div class="wow fadeInDown">
-          <div class="title-box">
-            <span>WHO WE ARE</span>
-            <h3>스마트 기술로 여는 새로운 세상</h3>
-          </div>
-          <p>
-            에너지 혁신과 4차 산업혁명의 중심에서 첨단 기술을 바탕으로 지속
-            가능한 발전을 이끌어 갑니다.
+        <h2 class="wow fadeInUp">
+          미래 에너지 Saving & <br />
+          All one Tech 플랫폼의 선두주자
+        </h2>
+        <p class="wow fadeInUp" data-wow-delay=".2s">
+          우리는 지속 가능한 미래를 위해 최선을 다합니다.<br />
+          에너지 절감과 혁신 기술을 통해 함께 성장하는 세상을 만들어갑니다.
+        </p>
+      </div>
+    </section>
+    <!-- banner end -->
+
+    <!-- section 1 -->
+    <section class="section whoarewe" id="sec1">
+      <div class="container">
+        <div class="title-box fix-title">
+          <span class="menu">WHO ARE WE</span>
+          <h3 class="title">
+            <span class="point-color">혁신을 주도하는 기업 퓨쳐워크, </span
+            ><br />
+            미래를 설계하다
+          </h3>
+          <p class="sub-title">
+            4차 산업혁명과 에너지 혁명 속에서 고객 맞춤형 솔루션으로 미래를
+            선도합니다.
           </p>
         </div>
 
-        <ul>
-          <li><img src="./src/img/who_01.png" alt="who" /></li>
-          <li><img src="./src/img/who_02.png" alt="who" /></li>
-          <li><img src="./src/img/who_03.png" alt="who" /></li>
-          <li><img src="./src/img/who_04.png" alt="who" /></li>
+        <ul class="whoarewe-list">
+          <li>
+            <img src="./src/img/whoarewe01.png" alt="SI / ITO 사업 이미지" />
+            <h4>SI / ITO 사업</h4>
+            <p>
+              10년 이상 초·중·고 학교를 대상으로 오프라인 사업을 추진해 온
+              경험을 바탕으로, <br />
+              기업 대상으로 전체 IT 부문을 수주하고 있습니다.<br />
+              당사는 컨설팅(기업 분석), SI(시스템 구축), ITO(운영·유지 보수)를
+              담당하며,<br />
+              상기 기업의 협력 업체까지 스마트 공장 사업을 필두로 SI 사업을
+              추진할 예정입니다.
+            </p>
+          </li>
+          <li>
+            <img
+              src="./src/img/whoarewe02.png"
+              alt="스마트 공장과 산업단지의 혁신"
+            />
+            <h4>스마트 공장과 산업단지의 혁신</h4>
+            <p>
+              올해 스마트 공장 사업을 통해 목표 매출 20억 원 중 설립 2달 만에
+              15%를 달성하였습니다.<br />
+              현재 민간기업을 대상으로 IT 컨설팅 및 통합 시스템 구축 사업을 추진
+              중이며,<br />
+              목표 매출은 25억 원입니다.<br />
+              차별화된 IT 구축 기술을 통해 통합 시스템을 구축하여 공장주들의
+              개별 니즈를 만족시킬 수 있습니다.
+            </p>
+          </li>
+          <li>
+            <img src="./src/img/whoarewe03.png" alt="양방향 플랫폼 보유" />
+            <h4>양방향 플랫폼 보유</h4>
+            <p>
+              대기업은 대기업 중심의 단방향 사업 전략을 추진 중입니다.<br />
+              하지만 당사의 제품은 양방향 플랫폼을 통해 다른 기업과 협업 및
+              상생이 가능합니다.<br />
+              또한, 당사 제품은 모듈 형식으로 제공할 수 있는 것이 큰
+              특장점이며,<br />
+              국내뿐만 아니라 해외 수출도 용이합니다.
+            </p>
+          </li>
         </ul>
       </div>
     </section>
+    <!-- section 1 end-->
 
-    <div class="container">
-      <section class="business wow fadeInDown">
-        <h3 class="sec-title" id="Business">Business</h3>
-        <p class="sec-subTitle">
-          4차 산업혁명과 에너지 혁명 속에서 고객 맞춤형 솔루션으로 미래를
-          선도합니다.
-        </p>
-        <ul class="business_cards">
+    <!-- section 2 -->
+    <section class="section factory" id="sec2">
+      <div class="title-box container">
+        <span class="menu">스마트 공장</span>
+        <h3 class="title">
+          <span class="point-color">스마트 공장과 산업단지 혁신 사업</span
+          >을<br />
+          통해 앞으로 나아갑니다
+        </h3>
+        <p class="sub-title">첨단 기술로 제조업의 미래를 선도합니다</p>
+      </div>
+
+      <ul class="factory-list">
+        <li>
+          <div class="container factory-text">
+            <span>자동화와 IoT 기술 적용</span>
+            <h4>스마트 공장 기술</h4>
+            <p>
+              최신 스마트 공장 기술을 활용하여 생산 과정의 자동화 및 데이터
+              분석을 통한 생산성 향상을 실현합니다.
+            </p>
+          </div>
+          <div class="img-box">
+            <img src="./src/img/factory01.png" alt="스마트 공장 기술" />
+          </div>
+        </li>
+        <li>
+          <div class="container factory-text reverse">
+            <span>스마트 시설 관리와 지능형 인프라 구축</span>
+            <h4>산업단지 혁신 사례</h4>
+            <p>
+              40년 이상 된 국내 최대의 남동공단 사업의 ‘문화가 있는 산단’ 사업
+              참여에 준비 중입니다.
+            </p>
+          </div>
+          <div class="img-box reverse">
+            <img src="./src/img/factory02.png" alt="스마트 공장 기술" />
+          </div>
+        </li>
+        <li>
+          <div class="container factory-text">
+            <span>한국산업단지공단 사업 & 항공산업단지공단 사업</span>
+            <h4>구축 사례(예정)</h4>
+            <p>스마트 플랫폼 구축 통한 구독 서비스 제공토록 추진중입니다.</p>
+          </div>
+          <div class="img-box">
+            <img src="./src/img/factory03.png" alt="스마트 공장 기술" />
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!-- section 2 end -->
+
+    <!-- section 3 -->
+    <section class="drone" id="sec3">
+      <div class="container">
+        <div class="title-box">
+          <h3>Smart Drone</h3>
+          <div class="right-text">
+            <h4>스마트 드론 기술 소개</h4>
+            <p>혁신적인 자율 비행 기능과 응용</p>
+          </div>
+        </div>
+
+        <ul class="drone-list">
           <li>
-            <div>
-              <h4>양방향 플랫폼 보유</h4>
-              <p>
-                대기업은 대기업 중심의 단방향 사업 전략을 추진 중입니다. 하지만
-                당사의 제품은 양방향 플랫폼을 통해 다른 기업과 협업 및 상생이
-                가능합니다. 또한, 당사 제품은 모듈 형식으로 제공할 수 있는 것이
-                큰 특장점이며, 국내뿐만 아니라 해외 수출도 용이합니다.
-              </p>
-            </div>
-            <img src="./src/img/business_01.png" alt="business" />
+            <h5>1. 자율 비행 기술</h5>
+            <span>AI 기반 자율 비행 시스템 도입</span>
+            <p>
+              최신 AI 기술을 적용한 스마트 드론의 자율 비행 시스템을 제공하여
+              실시간 장애물 인식과 피해 조치 능력을 갖춘 드론 서비스 통하여
+              안전하고 효율적인 비행을 가능하게 합니다.
+            </p>
+            <img
+              src="./src/img/drone01.png"
+              alt="AI 기반 자율 비행 시스템 도입 이미지"
+            />
           </li>
           <li>
-            <div>
-              <h4>스마트 공장과 산업단지의 혁신</h4>
-              <p>
-                올해 스마트 사업을 통해 설립 2달 만에 첫 매출을 올렸습니다. 현재
-                민간기업을 대상으로 IT 컨설팅 및 통합 시스템 구축 사업을 추진
-                중이며, 목표 매출은 15억 원입니다. 차별화된 IT 구축 기술을 통해
-                통합 시스템을 구축하여 고객들의 개별 니즈를 만족시킬 수
-                있습니다.
-              </p>
-            </div>
-            <img src="./src/img/business_02.png" alt="business" />
+            <h5>2. 응용 사례</h5>
+            <span>다양한 산업 및 서비스 분야 적용 사례</span>
+            <p>
+              스마트 드론이 농업, 건설, 물류 등 다양한 산업과 서비스 분야에서
+              서비스가 가능합니다.
+            </p>
+            <img
+              src="./src/img/drone02.png"
+              alt="AI 기반 자율 비행 시스템 도입 이미지"
+            />
           </li>
           <li>
-            <div>
-              <h4>SI / ITO 사업</h4>
-              <p>
-                10년 이상 초·중·고 학교를 대상으로 오프라인 사업을 추진해 온
-                경험을 바탕으로, 기업 대상으로 전체 IT 부문을 수주하고 있습니다.
-                당사는 컨설팅(기업 분석), SI(시스템 구축), ITO(운영·유지 보수)를
-                담당하며, 상기 기업의 협력 업체까지 스마트 공장 사업을 필두로 SI
-                사업을 추진할 예정입니다.
-              </p>
-            </div>
-            <img src="./src/img/business_03.png" alt="business" />
+            <h5>3. 구축 사례(예정)</h5>
+            <span>4,400평규모의 신축공장 드론 서비스</span>
+            <p>2MW 규모의 태양광 검사 서비스 및 공장 방범서비스</p>
+            <img
+              src="./src/img/drone03.png"
+              alt="AI 기반 자율 비행 시스템 도입 이미지"
+            />
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
+    <!-- section 3 end -->
 
-      <section class="history wow fadeInDown">
-        <h3 class="sec-title" id="History">연혁</h3>
-        <p class="sec-subTitle">
-          끊임없는 도전과 성과의 기록 지속 가능한 미래를 향해 나아갑니다. 우리가
-          걸어온 길을 통해 비전을 제시합니다.
-        </p>
+    <!-- section 4 -->
+    <section class="smartFarm" id="sec4">
+      <div class="container">
+        <div class="title-box">
+          <img src="./src/img/smart_farm_icon.png" alt="스마트팜 아이콘" />
+          <div>
+            <p class="sub-title">디지털 농업의 혁신과 생산성 증대</p>
+            <h3 class="title">스마트 팜 기술 소개</h3>
+          </div>
+          <img src="./src/img/smart_farm_icon.png" alt="스마트팜 아이콘" />
+        </div>
+      </div>
 
-        <ul class="his-list">
+      <div class="wrapper">
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div
+                class="front"
+                style="background-image: url(./src/img/smartFarm_01.png)"
+              >
+                <div class="inner">
+                  <p>IoT 기반 스마트 농업 시스템</p>
+                  <span
+                    >센서 네트워크와 데이터 분석을 통한 스마트 농업 관리를
+                    가능하게 서비스 제공합니다.</span
+                  >
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    스마트 팜에서 사용되는 IoT 기술과 센서 네트워크를 통해
+                    실시간으로 농작물 상태를 모니터링하고 데이터를 분석하여
+                    생산성을 극대화 서비스를 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div
+                class="front"
+                style="background-image: url(./src/img/smartFarm_02.png)"
+              >
+                <div class="inner">
+                  <p>구축 분야</p>
+                  <span>비닐하우스, 논/밭/산림 농약살포 서비스</span>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    스마트 팜에서 사용되는 IoT 기술과 센서 네트워크를 통해
+                    실시간으로 농작물 상태를 모니터링하고 데이터를 분석하여
+                    생산성을 극대화 서비스를 제공합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div
+                class="front"
+                style="background-image: url(./src/img/smartFarm_03.png)"
+              >
+                <div class="inner">
+                  <p>구축 사례</p>
+                  <span>(추진중)</span>
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>경기도 화훼단지 대상으로 협의중입니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 4 end -->
+
+    <!-- section 5 -->
+    <section class="smart-last">
+      <div class="container">
+        <h3 class="title">
+          세상을 <span class="point-color">스마트화</span> 하겠습니다.
+        </h3>
+        <ul class="smart-last-list">
           <li>
-            <p class="date"><span class="line"></span>2024년 1월</p>
-            <ul class="his-list2">
-              <li>(주)FUTUREWORK 법인 설립</li>
-            </ul>
+            <div class="title-box">
+              <h4>스마트 공장 사업 추진</h4>
+              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+            </div>
+            <p>
+              4400평 규모의 출판공장의 공정별 시스템화 (MES 시스템 구축) 는
+              물론이고 설비로봇과 기존 설비의 디지털화까지 구현하여 명실상부한
+              스마트공장 사업을 추진중입니다.
+            </p>
           </li>
           <li>
-            <p class="date"><span class="line"></span>2024년 2월</p>
-            <ul class="his-list2">
-              <li>㈜그린온 개발 고도화 1차 사업진행</li>
-              <li>- 산업용/업소용</li>
-              <li>- 살충기 / 공기제균기</li>
-              <li>- 대시보드외 개발 일체</li>
-            </ul>
+            <div class="title-box">
+              <h4>인프라 사업 추진</h4>
+              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+            </div>
+            <p>
+              4400평 규모의 출판공장의 냉방.난방. 그리고 인쇄실의
+              냄새제거/(종이)분진제거/미세먼지 제거를 위한 공조시스템
+              구축예정입니다 (계약예정)
+            </p>
           </li>
           <li>
-            <p class="date"><span class="line"></span>2024년 3월</p>
-            <ul class="his-list2">
-              <li>스마트 공장 사업(MES) 추진</li>
-            </ul>
-          </li>
-          <li>
-            <p class="date"><span class="line"></span>2024년 4월</p>
-            <ul class="his-list2">
-              <li>㈜그린온 개발 고도화 1차 완료</li>
-              <li>스마트공장 사업 준비 완료</li>
-            </ul>
-          </li>
-          <li>
-            <p class="date"><span class="line"></span>2024년 5월</p>
-            <ul class="his-list2">
-              <li>㈜그린온 개발 고도화 2차 사업협의</li>
-              <li>스마트 공장 및 인프라 사업 계약 추진</li>
-              <li>- FEMS(냉.난방/공조), 태양광 사업별도</li>
-            </ul>
+            <div class="title-box">
+              <h4>스마트 드론 사업 추진</h4>
+              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+            </div>
+            <p>
+              4400평 규모의 출판공장의 옥상의 태양광 모니터링과 경비 및 방범를
+              위한 스마트 드론을 통한 서비스 제공하기 위하여 개발 중입니다. 
+            </p>
           </li>
         </ul>
+      </div>
+    </section>
+    <!-- section 5 end -->
 
-        <p class="his-content">
-          ㈜FUTUREWORK는 IT경력 20년 이상의 전문가들과 같이 스마트 사업을 주도
-          하고 있습니다.<br />
-          플랫폼 사업은 현재 다른 IOT 플랫폼 솔루션 기업의 개발 총괄 및
-          유지보수를 수행 중이며, 인프라 사업 또한 4,400평 규모의 신축공장의
-          태양광/냉.난방/공조(냄새-분진-미세먼지 제거포함)까지 추진중이라 비록
-          연혁은 짧지만 내실 및 성장성이 큰기업입니다. 더 나아가 자타가
-          공인하시는 자문단을 모시고 더욱더 매진하겠습니다.
-        </p>
-      </section>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="main-footer container">
+        <div class="left-cont">
+          <ul class="menu-list">
+            <li>
+              <a href="#sec1">회사소개</a>
+            </li>
+            <li>
+              <a href="#sec2">스마트 공장</a>
+            </li>
+            <li>
+              <a href="#sec3">스마트 드론</a>
+            </li>
+            <li>
+              <a href="#sec4">스마트 팜</a>
+            </li>
+          </ul>
 
-      <section class="vision wow fadeInDown">
-        <h3 class="sec-title" id="Vision">비전 목표</h3>
-        <p class="sec-subTitle">
-          지속 가능한 혁신과 성장을 목표로 미래를 이끌어 갈 수 있는 비전을
-          제시합니다.
-        </p>
-
-        <ul class="vision-list">
-          <li>
-            <div>
-              <h5>태동기</h5>
-              <p>
-                법인 설립<br />
-                국가기관 공급기업등록<br />
-                국가기관 사업추진
-              </p>
-            </div>
-
-            <span>2024년 1월</span>
-          </li>
-          <li>
-            <div>
-              <h5>사업기반 구축 및 구체화</h5>
-              <p>
-                국가기관 사업 활성화<br />
-                - 스마트공장 수주<br />
-                - 데이터바우처 가공 및 판매 기업<br />
-                - 스마트시티 사업추진<br />
-                - 스마트 산업단지추진
-              </p>
-            </div>
-
-            <span>2024년 5월 ~ 7월</span>
-          </li>
-          <li>
-            <div>
-              <h5>도약기</h5>
-              <p>
-                스마트공장 구축<br />
-                스마트산단 사업 구축<br />
-                시행사 및 시공사 통한 스마트사업 구축<br />
-                SI사업 추진<br />
-                글로벌화를 위한 외부 투자유치
-              </p>
-            </div>
-
-            <span>2024년 8월 ~ 2025년</span>
-          </li>
-          <li>
-            <div>
-              <h5>안정기</h5>
-              <p>
-                스마트시티 사업통한 플랫폼화<br />
-                - 시스템 모듈화<br />
-                - 표준화<br />
-                <br />
-                SI사업 활성화<br />
-                - 플랫폼 확장통한 SI추진
-              </p>
-            </div>
-
-            <span>2026년 ~ 2027년</span>
-          </li>
-          <li>
-            <div>
-              <h5>
-                확장기<br />
-                (글로벌 및 플랫폼+)
-              </h5>
-              <p>
-                다국적 언어용 제품출시<br />
-                국내.해외 채널 및 대리점<br />
-                IPO통한 글로벌 기업전환
-              </p>
-            </div>
-
-            <span>2028년~</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="DeSEMS">
-        <div class="wow fadeInDown">
-          <h3 class="sec-title" id="DeSEMS">DeSEMS</h3>
-          <p class="sec-subTitle">
-            효율성과 지속 가능성을 모두 갖춘 솔루션으로 미래의 스마트 산업단지와
-            교통 시스템을 설계합니다.
-          </p>
+          <ul class="company-list">
+            <li>경기도 김포시 풍무2로 25, 3층 301호(풍무동)</li>
+            <li>팩스 : 031-624-1868</li>
+            <li>상호 : (주)퓨처워크 대표 : 류 승 신</li>
+          </ul>
         </div>
 
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">01. DeSEMS</h4>
-          <p class="DeSEMS-subTitle">
-            DeSEMS 솔루션은 에너지 절감 관리와 핀테크를 결합하여 고객에게 가치를
-            고도화하기 위한 서비스를 제공하는 Platform입니다.
-          </p>
-          <img src="./src/img/DeDeMs_01.png" alt="DeSEMS" class="DeSEMS-img" />
+        <div class="right-cont">
+          <p>Contact us</p>
+          <span>E-mail . help@ftwk.co.kr</span>
         </div>
+      </div>
 
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">02. DeSEMS Platform 관련 용어 정의</h4>
-          <img src="./src/img/DeDeMs_02.png" alt="DeSEMS" class="DeSEMS-img" />
+      <div class="sub-footer">
+        <div class="container">
+          <p>FUTUREWORK © 2024. All Rights Reserved.</p>
+          <span>Future Work</span>
         </div>
-
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">03. DeSEMS Platform</h4>
-          <p class="DeSEMS-subTitle">핵심 기술</p>
-          <p class="DeSEMS-content">
-            - 종합 에너지 관리, 에너지 절감 가치 고도화, 고유 에너지 절감
-            알고리즘, 국제 표준 기술적용
-          </p>
-          <img src="./src/img/DeDeMs_03.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">04. DeSEMS 시스템</h4>
-          <p class="DeSEMS-subTitle">핵심 제품</p>
-          <img src="./src/img/DeDeMs_04.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">05. DeSEMS 시스템</h4>
-          <p class="DeSEMS-subTitle">DeSEMS-CA/CM 개념도</p>
-          <p class="DeSEMS-content">
-            - 도시계획 초기단계에서 저탄소 에너지 계획을 위한 도시 미기후 및
-            에너지 주체에 대한 GIS기반 수요예측 설계 툴입니다.
-          </p>
-          <img src="./src/img/DeDeMs_05.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-
-        <div class="wow fadeInDown">
-          <p class="DeSEMS-subTitle">DeSEMS-PH/W 운영 체계도</p>
-          <p class="DeSEMS-content">
-            - DeSEMS-P 제품은 센서부, 제어부, 원격검침부, Middleware, 모니터링
-            Client로 구성되었습니다.
-          </p>
-          <img src="./src/img/DeDeMs_06.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-        <div class="wow fadeInDown">
-          <p class="DeSEMS-subTitle">
-            DeSEMS P 주요 기능 (Dashboard) : 고객 제공용 관리 화면 (현재) , •
-            건물의 에너지 소비와 관련된 각종 데이터의 획득, 전달, 수집 및 관리를
-            통해 건물 층별 에너지 소비내역 및 전일 비교 감금액, 전력 사용량과
-            네트워크, 서버 상태를 쉽게 파악할 수 있도록 정보제공
-          </p>
-          <img src="./src/img/DeDeMs_07.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-        <div class="wow fadeInDown">
-          <p class="DeSEMS-subTitle">
-            DeSEMS-P 주요기능 (설비현황) : 고객 제공용 관리 화면 (현재)
-          </p>
-          <p class="DeSEMS-content">
-            운영자가 건물에서 운용되는 각종 설비의 운전상태와 성능을 쉽게 파악할
-            수 있도록 분석내용 제공
-          </p>
-          <img src="./src/img/DeDeMs_08.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-        <div class="wow fadeInDown">
-          <h4 class="DeSEMS-title">06. 향후 DeSEMS 시스템 모습</h4>
-          <p class="DeSEMS-subTitle">DeSEMS-AI</p>
-          <p class="DeSEMS-content">
-            도시 및 단위 빌딩 대상으로 BigData 분석 및 머신 러닝을 통한 최적의
-            자동제어를 통하여 쾌적한 환경 제 공 및 에너지 절감을 실현하고
-            핀테크를 통한 고객에게 부가가치를 제공함
-          </p>
-          <img src="./src/img/DeDeMs_09.png" alt="DeSEMS" class="DeSEMS-img" />
-        </div>
-      </section>
-    </div>
-
-    <footer>
-      <p>FUTUREWORK © 2024.All Rights Reserved.</p>
+      </div>
     </footer>
+    <!-- footer end-->
   </body>
 </html>
