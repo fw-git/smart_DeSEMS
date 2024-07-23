@@ -120,15 +120,43 @@
           </ul>
         </div>
 
-        <div class="clickEmail">
-          <div id="notification">문의 이메일이 클립보드에 복사되었습니다.</div>
-          <img
-            src="./src/img/sendMailIcon.png"
-            alt="sendemail"
-            class="send-email"
-            id="copyButton"
-          />
-        </div>
+        <ul class="icon-list">
+          <li class="clickEmail">
+            <div id="notification">
+              문의 이메일이 클립보드에 복사되었습니다.
+            </div>
+            <img
+              src="./src/img/send_mail_icon.png"
+              alt="sendemail"
+              class="send-email"
+              id="copyButton"
+            />
+          </li>
+          <li class="mobile-menu">
+            <img
+              src="./src/img/menu_icon.png"
+              alt="sendemail"
+              class="mobile-menu-img"
+              id="copyButton"
+            />
+          </li>
+          <li class="mobile-menu-list">
+            <ul>
+              <li class="menuItem">
+                <a href="#sec1">회사소개</a>
+              </li>
+              <li class="menuItem">
+                <a href="#sec2">스마트 공장</a>
+              </li>
+              <li class="menuItem">
+                <a href="#sec3">스마트 드론</a>
+              </li>
+              <li class="menuItem">
+                <a href="#sec4">스마트 팜</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </header>
     <div class="header-hide-box"></div>
@@ -138,7 +166,7 @@
     <section class="main-banner-sec parallax">
       <img src="./src/img/bannerbg.png" alt="배경 이미지" class="banner-img" />
       <div class="container">
-        <h2 class="wow fadeInUp">
+        <h2 class="wow" id="animatedHeading">
           미래 에너지 Saving & <br />
           All one Tech 플랫폼의 선두주자
         </h2>
@@ -153,7 +181,7 @@
     <!-- section 1 -->
     <section class="section whoarewe" id="sec1">
       <div class="container">
-        <div class="title-box fix-title">
+        <div class="title-box fix-title mobileWowfade">
           <span class="menu">WHO ARE WE</span>
           <h3 class="title">
             <span class="point-color">혁신을 주도하는 기업 퓨쳐워크, </span
@@ -167,8 +195,10 @@
         </div>
 
         <ul class="whoarewe-list">
-          <li>
-            <img src="./src/img/whoarewe01.png" alt="SI / ITO 사업 이미지" />
+          <li class="mobileWowfade">
+            <div class="whoarewe-img">
+              <img src="./src/img/whoarewe01.png" alt="SI / ITO 사업 이미지" />
+            </div>
             <h4>SI / ITO 사업</h4>
             <p>
               10년 이상 초·중·고 학교를 대상으로 오프라인 사업을 추진해 온
@@ -180,11 +210,13 @@
               추진할 예정입니다.
             </p>
           </li>
-          <li>
-            <img
-              src="./src/img/whoarewe02.png"
-              alt="스마트 공장과 산업단지의 혁신"
-            />
+          <li class="mobileWowfade">
+            <div class="whoarewe-img">
+              <img
+                src="./src/img/whoarewe02.png"
+                alt="스마트 공장과 산업단지의 혁신"
+              />
+            </div>
             <h4>스마트 공장과 산업단지의 혁신</h4>
             <p>
               올해 스마트 공장 사업을 통해 목표 매출 20억 원 중 설립 2달 만에
@@ -196,8 +228,10 @@
               개별 니즈를 만족시킬 수 있습니다.
             </p>
           </li>
-          <li>
-            <img src="./src/img/whoarewe03.png" alt="양방향 플랫폼 보유" />
+          <li class="mobileWowfade">
+            <div class="whoarewe-img">
+              <img src="./src/img/whoarewe03.png" alt="양방향 플랫폼 보유" />
+            </div>
             <h4>양방향 플랫폼 보유</h4>
             <p>
               대기업은 대기업 중심의 단방향 사업 전략을 추진 중입니다.<br />
@@ -215,7 +249,7 @@
 
     <!-- section 2 -->
     <section class="section factory" id="sec2">
-      <div class="title-box container">
+      <div class="title-box container mobileWowfade">
         <span class="menu">스마트 공장</span>
         <h3 class="title">
           <span class="point-color">스마트 공장과 산업단지 혁신 사업</span
@@ -226,7 +260,7 @@
       </div>
 
       <ul class="factory-list">
-        <li>
+        <li class="mobileWowfade">
           <div class="container factory-text">
             <span>자동화와 IoT 기술 적용</span>
             <h4>스마트 공장 기술</h4>
@@ -239,7 +273,7 @@
             <img src="./src/img/factory01.png" alt="스마트 공장 기술" />
           </div>
         </li>
-        <li>
+        <li class="mobileWowfade">
           <div class="container factory-text reverse">
             <span>스마트 시설 관리와 지능형 인프라 구축</span>
             <h4>산업단지 혁신 사례</h4>
@@ -252,7 +286,7 @@
             <img src="./src/img/factory02.png" alt="스마트 공장 기술" />
           </div>
         </li>
-        <li>
+        <li class="mobileWowfade">
           <div class="container factory-text">
             <span>한국산업단지공단 사업 & 항공산업단지공단 사업</span>
             <h4>구축 사례(예정)</h4>
@@ -269,7 +303,7 @@
     <!-- section 3 -->
     <section class="drone" id="sec3">
       <div class="container">
-        <div class="title-box">
+        <div class="title-box mobileWowfade">
           <h3>Smart Drone</h3>
           <div class="right-text">
             <h4>스마트 드론 기술 소개</h4>
@@ -277,7 +311,7 @@
           </div>
         </div>
 
-        <ul class="drone-list">
+        <ul class="drone-list mobileWowfade">
           <li>
             <h5>1. 자율 비행 기술</h5>
             <span>AI 기반 자율 비행 시스템 도입</span>
@@ -318,7 +352,7 @@
     <!-- section 3 end -->
 
     <!-- section 4 -->
-    <section class="smartFarm" id="sec4">
+    <section class="smartFarm mobileWowfade" id="sec4">
       <div class="container">
         <div class="title-box">
           <img src="./src/img/smart_farm_icon.png" alt="스마트팜 아이콘" />
@@ -403,7 +437,7 @@
     <!-- section 4 end -->
 
     <!-- section 5 -->
-    <section class="smart-last">
+    <section class="smart-last mobileWowfade">
       <div class="container">
         <h3 class="title">
           세상을 <span class="point-color">스마트화</span> 하겠습니다.
@@ -412,7 +446,7 @@
           <li>
             <div class="title-box">
               <h4>스마트 공장 사업 추진</h4>
-              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+              <img src="./src/img/down_icon.png" alt="드롭다운" />
             </div>
             <p>
               4400평 규모의 출판공장의 공정별 시스템화 (MES 시스템 구축) 는
@@ -423,7 +457,7 @@
           <li>
             <div class="title-box">
               <h4>인프라 사업 추진</h4>
-              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+              <img src="./src/img/down_icon.png" alt="드롭다운" />
             </div>
             <p>
               4400평 규모의 출판공장의 냉방.난방. 그리고 인쇄실의
@@ -434,7 +468,7 @@
           <li>
             <div class="title-box">
               <h4>스마트 드론 사업 추진</h4>
-              <img src="./src/img/list_dropdown.png" alt="드롭다운" />
+              <img src="./src/img/down_icon.png" alt="드롭다운" />
             </div>
             <p>
               4400평 규모의 출판공장의 옥상의 태양광 모니터링과 경비 및 방범를
