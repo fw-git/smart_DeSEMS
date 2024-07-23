@@ -377,7 +377,11 @@ html {
       width: 40px;
     }
   }
-
+  .back-icon {
+    display: block;
+    width: 30px;
+    margin: 10px auto 0;
+  }
   .wrapper {
     margin: 0 auto;
     max-width: 1310px;

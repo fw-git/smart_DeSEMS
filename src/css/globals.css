@@ -534,6 +534,11 @@ html {
 .smartFarm .title-box img {
   width: 40px;
 }
+.smartFarm .back-icon {
+  display: block;
+  width: 30px;
+  margin: 10px auto 0;
+}
 .smartFarm .wrapper {
   margin: 0 auto;
   max-width: 1310px;

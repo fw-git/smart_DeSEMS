@@ -93,7 +93,6 @@ $(function () {
       });
     });
   }
-  applyGsap();
 
   function applyAll() {
     applyAnimation();
