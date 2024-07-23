@@ -234,13 +234,9 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    margin-right: auto;
-    margin-left: 0;
     &.reverse {
       width: 50%;
-      margin-right: 0;
-      margin-left: auto;
+      margin-right: -5%;
     }
     span {
       font-size: 14px;
@@ -802,10 +798,15 @@ html {
   }
   // 섹션2
   .factory-text {
+    width: 50%;
+    margin-left: 0;
     height: auto;
     margin-right: auto;
     width: auto;
     &.reverse {
+      width: 50%;
+      margin-right: 0;
+      margin-left: auto;
       width: auto;
     }
   }

@@ -66,39 +66,37 @@ $(function () {
       }
     });
   }
-  function applyGsap() {
-    if (!isMobile && $(window).width() > 1200) {
-      // 텍스트 고정 컨텐츠 스크롤
-      gsap.timeline({
+  if (!isMobile && $(window).width() > 1200) {
+    // 텍스트 고정 컨텐츠 스크롤
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".fix-title",
+        pin: true,
+        scrub: 0.3,
+        start: "-=170",
+        end: "bottom 600",
+        // markers: true
+      },
+    });
+
+    // 이미지 사이즈 줄이기
+    gsap.utils.toArray(".img-box").forEach((img) => {
+      gsap.to(img, {
+        width: "45%", // 목표 너비
         scrollTrigger: {
-          trigger: ".fix-title",
-          pin: true,
-          scrub: 0.3,
-          start: "-=170",
-          end: "bottom 600",
-          // markers: true
+          trigger: img, // 이미지가 스크롤 트리거가 됨
+          start: "top bottom", // 스크롤 시작 위치
+          end: "bottom bottom", // 스크롤 끝 위치
+          scrub: true, // 스크롤에 따라 애니메이션 진행
+          // markers: true // 디버그용 마커 표시
         },
       });
-
-      // 이미지 사이즈 줄이기
-      gsap.utils.toArray(".img-box").forEach((img) => {
-        gsap.to(img, {
-          width: "45%", // 목표 너비
-          scrollTrigger: {
-            trigger: img, // 이미지가 스크롤 트리거가 됨
-            start: "top bottom", // 스크롤 시작 위치
-            end: "bottom bottom", // 스크롤 끝 위치
-            scrub: true, // 스크롤에 따라 애니메이션 진행
-            // markers: true // 디버그용 마커 표시
-          },
-        });
-      });
-    }
+    });
   }
+  applyGsap();
 
   function applyAll() {
     applyAnimation();
-    applyGsap();
     applyWowFade();
   }
   // 페이지 로드 시와 창 크기 변경 시 함수 호출
